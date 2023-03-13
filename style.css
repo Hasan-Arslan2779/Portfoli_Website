@@ -1,0 +1,177 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+:root {
+  --primary-color: #101820;
+  --secondry-color: rgba(40, 113, 202, 0.467);
+  --text-color: #f2faff;
+  --gray: rgba(42, 53, 62, 0.4);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  border: none;
+  list-style-type: none;
+}
+body {
+  scroll-behavior: smooth;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+  scroll-padding-top: 5.5rem;
+  background: var(--primary-color);
+  color: var(--text-color);
+}
+#mainNavbar {
+  background-color: var(--primary-color) !important;
+  border-bottom: 1px solid var(--gray);
+}
+
+#mainNavbar .nav-item .nav-link {
+  color: var(--text-color);
+  position: relative;
+}
+#mainNavbar .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--secondry-color);
+  bottom: -3px;
+  left: 0;
+  transition: ease 0.4s;
+  -webkit-transition: ease 0.4s;
+  -moz-transition: ease 0.4s;
+  -ms-transition: ease 0.4s;
+  -o-transition: ease 0.4s;
+}
+#mainNavbar .nav-item:not(:last-child) .nav-link:hover::after {
+  width: 100%;
+}
+.navbar-toggler:focus,
+.navbar-active:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+}
+section {
+  padding: 5rem 0;
+}
+/* HERO SECTİON */
+
+#hero {
+  background-image: url("/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  background-position: center right;
+}
+#hero .social a {
+  transition: ease 0.4s;
+  -webkit-transition: ease 0.4s;
+  -moz-transition: ease 0.4s;
+  -ms-transition: ease 0.4s;
+  -o-transition: ease 0.4s;
+}
+#hero .social a:hover {
+  color: var(--text-color);
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+#hero .typer {
+  color: red;
+}
+
+/* ABOUT SECTİON */
+
+.exp {
+  background-color: var(--gray);
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+.exp-number {
+  margin-top: 20px;
+  margin-bottom: -3px;
+}
+
+/* SKILLS SECTİON */
+.skill {
+  background: var(--gray);
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.skill:hover {
+  transform: scale(1.12) rotate(-5deg);
+  -webkit-transform: scale(1.12) rotate(-5deg);
+  -moz-transform: scale(1.12) rotate(-5deg);
+  -ms-transform: scale(1.12) rotate(-5deg);
+  -o-transform: scale(1.12) rotate(-5deg);
+  box-shadow: 0px 10px 25px 10px rgba(9, 132, 206, 40%);
+}
+/* SERVİCES SECTİON */
+.service-box {
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.service-box:hover {
+  background-image: linear-gradient(-45deg, #2763b8 0%, #2232dd 100%);
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  padding: 20px 0;
+}
+/* PORFOLİO SECTİON */
+#portfolio img {
+  width: 100%;
+  height: 350px;
+  cursor: pointer;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+  object-fit: cover;
+}
+#gallery-modal .modal-img {
+  width: 100%;
+}
+/* CONTACT SECTİON */
+.contact-bg{
+  background-color: var(--secondry-color);
+  height: 70vh;
+  padding: 50px;
+}
+form input,textarea{
+  color: var(--text-color  ) !important;
+  background-color: var(--primary-color) !important;
+  border: 3px solid var(--gray) !important;
+}
+.form-control::placeholder{
+  color: rgba(231, 230, 230,0.593);
+}
+
+@media screen  and (max-width:974px){
+  .contact-bg{
+    height: 40vh;
+  }
+}
